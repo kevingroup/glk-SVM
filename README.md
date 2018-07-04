@@ -25,7 +25,7 @@ If successful, you could find the following executables in the current directory
 
 Here we introduce the basic workflow of `glk-SVM`.  Please refer to help messages for more detailed information of each program.  You can find the instructions by running the programs without any argument.
 
-####(1) Calculating kernel matrix
+#### (1) Calculating kernel matrix
 
 A pre-computed kernel matrix is needed to train SVM classifiers. Here we are going to use `test/test_positive.fa` as a positive sequence set, and `test/test_negative.fa` as a negative set. The resulting kernel matrix is stored in `test_kernel.out`.
 
