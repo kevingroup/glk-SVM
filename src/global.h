@@ -27,6 +27,7 @@ int stringcompare(char *s1, char*s2, int maxlength) ;
 int myrandom(int M);
 void randomPermute(double *x, int N);
 void randomPermute(int *x, int N);
+int NchooseK(int n, int k);
 
 #endif //GLK_GLOBAL_H
 

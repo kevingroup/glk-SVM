@@ -50,3 +50,17 @@ void randomPermute(int *x, int N)
         x[j]=h;
     }
 }
+
+int NchooseK(int n, int k)
+{
+    if (k > n - k)
+        k = n - k;
+    int p = 1;
+    int q = 1;
+    for (int i = 1; i <= k; i++)
+    {
+        p *= n - i + 1;
+        q *= i;
+    }
+    return p / q;
+}

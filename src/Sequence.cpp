@@ -1,6 +1,7 @@
-//
-// Created by cyhong on 3/8/2017.
-//
+/*
+	Created by cyhong on 3/8/2017.
+	This code is partially adopted from gkm-SVM(Mahmoud Ghandi, http://www.beerlab.org/gkmsvm/)
+*/
 
 #include <cstring>
 #include "Sequence.h"

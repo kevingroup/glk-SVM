@@ -1,0 +1,96 @@
+g = 2, l = 8, k = 8 : maximal difference = 98
+CTC*T-AA*AT  pos_count = 96  neg_count = 6  diff = 90
+Positive spacing count distribution (from 0 to 8):
+0 0 1 12 19 12 16 18 18 
+CTCA*-AA*AT  pos_count = 98  neg_count = 8  diff = 90
+Positive spacing count distribution (from 0 to 8):
+0 0 0 14 19 11 16 19 19 
+C*CAT-AA*AT  pos_count = 99  neg_count = 9  diff = 90
+Positive spacing count distribution (from 0 to 8):
+1 1 0 13 20 11 16 18 19 
+ACTCA-*AA*A  pos_count = 104  neg_count = 13  diff = 91
+Positive spacing count distribution (from 0 to 8):
+0 2 1 14 20 13 17 18 19 
+A*TCA-CAA*A  pos_count = 98  neg_count = 7  diff = 91
+Positive spacing count distribution (from 0 to 8):
+0 2 0 13 18 14 14 19 18 
+ACTCA-C*A*A  pos_count = 103  neg_count = 12  diff = 91
+Positive spacing count distribution (from 0 to 8):
+0 1 1 15 21 13 15 19 18 
+CT*AT-AA*AT  pos_count = 95  neg_count = 3  diff = 92
+Positive spacing count distribution (from 0 to 8):
+0 0 0 12 19 11 17 18 18 
+TCAT*-A*ATG  pos_count = 102  neg_count = 6  diff = 96
+Positive spacing count distribution (from 0 to 8):
+0 0 0 13 21 15 16 19 18 
+*TCAT-AA*AT  pos_count = 99  neg_count = 2  diff = 97
+Positive spacing count distribution (from 0 to 8):
+0 0 0 13 19 13 17 19 18 
+TCAT*-AA*AT  pos_count = 101  neg_count = 3  diff = 98
+Positive spacing count distribution (from 0 to 8):
+0 0 13 19 13 17 19 18 2 
+
+g = 2, l = 9, k = 8 : maximal difference = 98
+ACTCA-AA*A*  pos_count = 104  neg_count = 13  diff = 91
+Positive spacing count distribution (from 0 to 9):
+0 0 2 1 14 20 13 17 18 19 
+CT*AT-AA*AT  pos_count = 95  neg_count = 3  diff = 92
+Positive spacing count distribution (from 0 to 9):
+0 0 0 12 19 11 17 18 18 0 
+TCAT*-*ATGG  pos_count = 100  neg_count = 7  diff = 93
+Positive spacing count distribution (from 0 to 9):
+0 0 0 0 13 19 14 17 19 18 
+ACT*A-AA*AT  pos_count = 97  neg_count = 4  diff = 93
+Positive spacing count distribution (from 0 to 9):
+1 0 0 0 13 19 11 16 18 19 
+ACTC*-AA*AT  pos_count = 97  neg_count = 3  diff = 94
+Positive spacing count distribution (from 0 to 9):
+0 1 0 0 13 19 11 16 18 19 
+AC*CA-AA*AT  pos_count = 98  neg_count = 3  diff = 95
+Positive spacing count distribution (from 0 to 9):
+1 1 0 0 13 19 11 16 18 19 
+*TCAT-A*ATG  pos_count = 102  neg_count = 6  diff = 96
+Positive spacing count distribution (from 0 to 9):
+0 0 0 0 13 21 15 16 19 18 
+TCAT*-A*ATG  pos_count = 102  neg_count = 6  diff = 96
+Positive spacing count distribution (from 0 to 9):
+0 0 0 13 21 15 16 19 18 0 
+A*TCA-AA*AT  pos_count = 101  neg_count = 4  diff = 97
+Positive spacing count distribution (from 0 to 9):
+0 0 1 0 14 19 13 16 19 19 
+*TCAT-AA*AT  pos_count = 101  neg_count = 3  diff = 98
+Positive spacing count distribution (from 0 to 9):
+0 0 0 13 19 13 17 19 18 2 
+
+g = 2, l = 10, k = 8 : maximal difference = 98
+ACTC*-A*ATG  pos_count = 101  neg_count = 8  diff = 93
+Positive spacing count distribution (from 0 to 10):
+0 0 3 0 0 13 20 12 16 18 19 
+TCAT*-ATGG*  pos_count = 100  neg_count = 7  diff = 93
+Positive spacing count distribution (from 0 to 10):
+0 0 0 0 0 13 19 14 17 19 18 
+TGACT-*AA*A  pos_count = 106  neg_count = 13  diff = 93
+Positive spacing count distribution (from 0 to 10):
+1 0 0 2 1 14 21 13 17 18 19 
+ACTC*-AA*AT  pos_count = 97  neg_count = 3  diff = 94
+Positive spacing count distribution (from 0 to 10):
+0 1 0 0 13 19 11 16 18 19 0 
+GAC*C-AA*AT  pos_count = 100  neg_count = 6  diff = 94
+Positive spacing count distribution (from 0 to 10):
+2 0 0 0 0 13 19 11 16 20 19 
+AC*CA-AA*AT  pos_count = 98  neg_count = 3  diff = 95
+Positive spacing count distribution (from 0 to 10):
+1 1 0 0 13 19 11 16 18 19 0 
+G*CTC-AA*AT  pos_count = 102  neg_count = 7  diff = 95
+Positive spacing count distribution (from 0 to 10):
+3 1 1 1 0 13 19 11 16 18 19 
+*TCAT-A*ATG  pos_count = 102  neg_count = 6  diff = 96
+Positive spacing count distribution (from 0 to 10):
+0 0 0 0 13 21 15 16 19 18 0 
+A*TCA-AA*AT  pos_count = 101  neg_count = 4  diff = 97
+Positive spacing count distribution (from 0 to 10):
+0 0 1 0 14 19 13 16 19 19 0 
+GA*TC-AA*AT  pos_count = 104  neg_count = 6  diff = 98
+Positive spacing count distribution (from 0 to 10):
+3 0 0 2 0 14 19 12 16 18 20 
+

@@ -1,6 +1,7 @@
-//
-// Created by cyhong on 4/23/2017.
-//
+/*
+	Created by cyhong on 4/23/2017.
+	This code is partially adopted from gkm-SVM(Mahmoud Ghandi, http://www.beerlab.org/gkmsvm/)
+*/
 
 #include "TreeLeafData.h"
 
@@ -43,7 +44,7 @@ void TreeLeafData::add(int seqID)
                 this->seqInfo[2 * n - 1]++;
             }
             else {
-                if ((n & (n - 1)) == 0) // i.e. n is power of 2
+                if ((n & (n - 1)) == 0) // n is power of 2
                 {
                     // expand memory
                     int *newseqInfo;

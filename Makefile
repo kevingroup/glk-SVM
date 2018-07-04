@@ -10,10 +10,15 @@ SOURCES=Converter.cpp\
 		SVMtrain.cpp\
 		SequenceNames.cpp\
 		KTree.cpp\
-		TreeLeafData.cpp
+		TreeLeafData.cpp\
+		PatternExtractor.cpp
 
 
 OBJECTS=$(patsubst %.cpp,obj/%.o,$(SOURCES)) 
+
+SRC_GLKPATTERN=mainGLKpattern.cpp
+OBJ_GLKPATTERN=obj/mainGLKpattern.o
+GLKPATTERN=glk_pattern
 
 SRC_GLKKERNEL=mainGLKkernel.cpp
 OBJ_GLKKERNEL=obj/mainGLKkernel.o
@@ -27,14 +32,17 @@ SRC_SVMCLASSIFY=mainSVMclassify.cpp
 OBJ_SVMCLASSIFY=obj/mainSVMclassify.o
 SVMCLASSIFY=glk_classify
 
-all: $(SOURCES) $(GLKKERNEL) $(SVMTRAIN) $(SVMCLASSIFY)
+all: $(SOURCES) $(GLKPATTERN) $(GLKKERNEL) $(SVMTRAIN) $(SVMCLASSIFY)
 
 clean:
-	rm -f $(OBJECTS) $(OBJ_GLKKERNEL) $(OBJ_SVMTRAIN) $(OBJ_SVMCLASSIFY) $(GLKKERNEL) $(SVMTRAIN) $(SVMCLASSIFY)
+	rm -f $(OBJECTS) $(OBJ_GLKPATTERN) $(OBJ_GLKKERNEL) $(OBJ_SVMTRAIN) $(OBJ_SVMCLASSIFY) $(GLKKERNEL) $(SVMTRAIN) $(SVMCLASSIFY)
 
 obj/%.o : %.cpp
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) $< -o $@
+
+$(GLKPATTERN): $(OBJECTS) $(OBJ_GLKPATTERN)
+	$(CC) $(LDFLAGS) $(OBJECTS) $(OBJ_GLKPATTERN) -o $@
 
 $(GLKKERNEL): $(OBJECTS) $(OBJ_GLKKERNEL)
 	$(CC) $(LDFLAGS) $(OBJECTS) $(OBJ_GLKKERNEL) -o $@
@@ -46,4 +54,4 @@ $(SVMCLASSIFY): $(OBJECTS) $(OBJ_SVMCLASSIFY)
 	$(CC) $(LDFLAGS) $(OBJECTS) $(OBJ_SVMCLASSIFY) -o $@
 
 install:
-	cp glk_kernel glk_train glk_classify /bin
+	cp glk_pattern glk_kernel glk_train glk_classify /bin

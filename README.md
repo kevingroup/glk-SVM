@@ -17,6 +17,7 @@ If successful, you could find the following executables in the current directory
 - glk_kernel
 - glk_train
 - glk_classify
+- glk_pattern
 
 `make install` will simply copy these three executables to the `../bin` direcory
 
@@ -51,6 +52,18 @@ Now we can use `glk_classify` to score/classify any set of DNA sequences. Here, 
 Type:
 
   `$ ./glk_classify -g 2 -l 10 -k 8 test/test_positives.fa test_svseq.fa test_svalpha.out pos_classify.out`
+
+#### (4) Generating the most differential glk-ci-patterns 
+
+This program could be used to generate the glk-ci patterns with strongest differential occurrence between
+the positive and negative sequences. And we could set the proper parameter value of $l$ according to the maximal differences. A possible range of $l$ could be provided using `-f from -t to`.  
+
+Type:
+
+`$ ./glk_pattern -g 2 -f 8 -t 10 -k 8 test/test_positives.fa test/test_negatives.fa test_patterns.out`
+
+In the `test_patterns.out` will list the top N glk-ci patterns with strongest differential occurrence between
+the positive and negative sequences and the corresponding count in the positive and negative set. 
 
 ### Distribution
 
