@@ -3,8 +3,9 @@
 //
 
 #include "KTree.h"
-#include "stdio.h"
-#include "math.h"
+#include <stdio.h>
+#include <math.h>
+#include <omp.h>
 #include <iostream>
 #include <string>
 
@@ -349,8 +350,9 @@ void KTree::dfsTree_InnerProd(TreeNode* cur, int* GKmer, int x, int len_head, in
     }
 }
 
-void KTree::calKernel(Sequence **seqs, int nseqs, int g, int l, int k, double** Kernel, bool onlyMiddle)
+void KTree::calKernel(Sequence **seqs, int nseqs, int g, int l, int k, double** Kernel, bool onlyMiddle, int num_of_thread)
 {
+    omp_set_num_threads(num_of_thread);
     #pragma omp parallel for
     for (int id = 0; id < nseqs; id++)
     {

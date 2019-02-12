@@ -14,6 +14,7 @@
 #define DEF_K 8
 #define DEF_MAXSEQLEN 15000
 #define DEF_MAXNUMSEQ 15000
+#define DEF_NUM_OF_THREAD 8
 
 #define MAXNSVSeqs 100000
 #define DEF_GLKTYPE 1

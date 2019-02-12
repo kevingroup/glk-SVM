@@ -33,7 +33,7 @@ public:
     void dfsTree(TreeNode* cur, int seq_id, int* GKmer, int x, int len_head, int len, int mmcnt, int g, int k, double** Kernel);
     void dfsTree_norm(TreeNode* cur, int* GKmer, int x, int len_head, int len, int mmcnt, int g, int k, double* SUM);
     void dfsTree_InnerProd(TreeNode* cur, int* GKmer, int x, int len_head, int len, int mmcnt, int g, int k, double* InnerProd);
-    void calKernel(Sequence **seqs, int nseqs, int g, int l, int k, double** Kernel, bool onlyMiddle);
+    void calKernel(Sequence **seqs, int nseqs, int g, int l, int k, double** Kernel, bool onlyMiddle, int num_of_thread);
     void calInnerProd(Sequence *sgi, int g, int l, int k, double* InnerProd, bool onlyMiddle);
     double calcNorm(Sequence *sgi, int g, int l, int k, bool onlyMiddle);
 };

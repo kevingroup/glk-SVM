@@ -40,7 +40,7 @@ CSequenceNames::~CSequenceNames(void)
 
 int CSequenceNames::readSeqNames(char *seqNamesFN)
 {
-    int i,j;
+    int i;
     if (Nseqs!=0)
     {
         for(i=0;i<Nseqs;i++)
@@ -71,7 +71,7 @@ int CSequenceNames::readSeqNames(char *seqNamesFN)
 
 int CSequenceNames::readSeqNamesandWeights(char *seqNamesFN)
 {
-    int i,j;
+    int i;
     if (Nseqs!=0)
     {
         for(i=0;i<Nseqs;i++)

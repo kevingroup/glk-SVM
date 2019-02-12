@@ -1,6 +1,7 @@
 CC=g++
 CFLAGS=-c -Wall -O2 -std=c++11
 LDFLAGS= -std=c++11
+OMPFLAGS = -fopenmp
 
 vpath %.cpp src
 
@@ -42,16 +43,16 @@ obj/%.o : %.cpp
 	$(CC) $(CFLAGS) $< -o $@
 
 $(GLKPATTERN): $(OBJECTS) $(OBJ_GLKPATTERN)
-	$(CC) $(LDFLAGS) $(OBJECTS) $(OBJ_GLKPATTERN) -o $@
+	$(CC) $(OMPFLAGS) $(LDFLAGS) $(OBJECTS) $(OBJ_GLKPATTERN) -o $@
 
 $(GLKKERNEL): $(OBJECTS) $(OBJ_GLKKERNEL)
-	$(CC) $(LDFLAGS) $(OBJECTS) $(OBJ_GLKKERNEL) -o $@
+	$(CC) $(OMPFLAGS) $(LDFLAGS) $(OBJECTS) $(OBJ_GLKKERNEL) -o $@
 
 $(SVMTRAIN): $(OBJECTS) $(OBJ_SVMTRAIN)
-	$(CC) $(LDFLAGS) $(OBJECTS) $(OBJ_SVMTRAIN) -o $@
+	$(CC) $(OMPFLAGS) $(LDFLAGS) $(OBJECTS) $(OBJ_SVMTRAIN) -o $@
 
 $(SVMCLASSIFY): $(OBJECTS) $(OBJ_SVMCLASSIFY)
-	$(CC) $(LDFLAGS) $(OBJECTS) $(OBJ_SVMCLASSIFY) -o $@
+	$(CC) $(OMPFLAGS) $(LDFLAGS) $(OBJECTS) $(OBJ_SVMCLASSIFY) -o $@
 
 install:
 	cp glk_pattern glk_kernel glk_train glk_classify /bin

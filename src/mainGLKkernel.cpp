@@ -23,6 +23,7 @@ typedef struct {
     int K;
     int maxseqlen;
     int maxnumseq;
+    int num_of_thread;
     bool addRC;
     bool onlyMiddle;
     char *posfile;
@@ -66,6 +67,8 @@ void print_usage_and_exit(char *prog)
     cout << "                 default=" << DEF_MAXSEQLEN << endl;
     cout << "  -n maxNumSeq   set maximum number of sequences in the sequence files," << endl;
     cout << "                 default=" << DEF_MAXNUMSEQ << endl;
+    cout << "  -t num_thread  set the number of thread used by the program," << endl;
+    cout << "                 default=" << DEF_NUM_OF_THREAD << endl;
     cout << "  -R             if set, reverse complement sequences will be considered" << endl;
     cout << "  -A             if set, indel could be anywhere" << endl;
     cout << endl;
@@ -80,6 +83,7 @@ int glkKernel(OptsGLK &opt)
     int K = opt.K;
     int maxseqlen =	opt.maxseqlen;
     int nMAXSEQUENCES = opt.maxnumseq;
+    int num_of_thread = opt.num_of_thread;
     char* posSeqFN = opt.posfile;
     char* negSeqFN = opt.negfile;
     char* outFN = opt.outfile;
@@ -143,7 +147,7 @@ int glkKernel(OptsGLK &opt)
     KTree *Tree = new KTree();
 
     Tree->addAllSeqs(seqs, nseqs, G, L, K, addRC, onlyMiddle);
-    Tree->calKernel(seqs, nseqs, G, L, K, Kernel, onlyMiddle);
+    Tree->calKernel(seqs, nseqs, G, L, K, Kernel, onlyMiddle, num_of_thread);
 
     double *norm = new double [nMAXSEQUENCES];
     int i = 0;
@@ -201,10 +205,11 @@ int main(int argc, char** argv)
     opt.K = DEF_K;
     opt.maxseqlen = DEF_MAXSEQLEN;
     opt.maxnumseq = DEF_MAXNUMSEQ;
+    opt.num_of_thread = DEF_NUM_OF_THREAD;
     opt.addRC = false;
     opt.onlyMiddle = true;
 
-    while ((c = getopt (argc, argv, "g:l:k:d:m:n:RA")) != -1)
+    while ((c = getopt (argc, argv, "g:l:k:d:m:n:t:RA")) != -1)
     {
         switch (c)
         {
@@ -222,6 +227,9 @@ int main(int argc, char** argv)
                 break;
             case 'n':
                 opt.maxnumseq = atoi(optarg);
+                break;
+            case 't':
+                opt.num_of_thread = atoi(optarg);
                 break;
             case 'R':
                 opt.addRC = true;
